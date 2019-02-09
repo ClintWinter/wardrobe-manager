@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Arvo|Sarabun:400,700);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.2.1 (https://getbootstrap.com/)
@@ -10491,8 +10491,11 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+* {
+  font-family: Sarabun, sans-serif;
+}
+
+h1 {
+  font-family: Arvo, serif;
 }
 
