@@ -2,6 +2,56 @@
     font-family: Sarabun, sans-serif;
 }
 
-h1 {
-    font-family: Arvo, serif;
+h1, h2 {
+    font-family: Cinzel, serif;
 }
+
+a {
+    color: $primary;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+}
+
+.btn-primary {
+    background-color: $primary;
+    color: $white;
+}
+
+.btn-secondary {
+    color: $primary;
+}
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 6px !important; }
+.mb-2 { margin-bottom: 12px !important; }
+.mb-3 { margin-bottom: 18px !important; }
+.mb-4 { margin-bottom: 24px !important; }
+.mb-5 { margin-bottom: 30px !important; }
+.mb-6 { margin-bottom: 36px !important; }
+.mb-7 { margin-bottom: 42px !important; }
+.mb-8 { margin-bottom: 48px !important; }
+.mb-9 { margin-bottom: 54px !important; }
+.mb-10 { margin-bottom: 60px !important; }
+
+.w-10 { width: 10px !important; }
+.w-25 { width: 25px !important; }
+.w-50 { width: 50px !important; }
+.w-75 { width: 75px !important; }
+.w-100 { width: 100px !important; }
+.w-150 { width: 150px !important; }
+.w-200 { width: 200px !important; }
+.w-250 { width: 250px !important; }
+.w-300 { width: 300px !important; }
+.w-350 { width: 350px !important; }
+.w-400 { width: 400px !important; }
+.w-450 { width: 450px !important; }
+.w-500 { width: 500px !important; }
+.w-600 { width: 600px !important; }
+.w-700 { width: 700px !important; }
+.w-800 { width: 800px !important; }

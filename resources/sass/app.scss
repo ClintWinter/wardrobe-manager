@@ -1,11 +1,9 @@
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Arvo|Sarabun:400,700');
-
-// Variables
+@import 'normalize';
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
+// universal
 @import 'main';
+
+// modular
+@import 'landing';
