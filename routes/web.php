@@ -1,11 +1,11 @@
 <?php
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/', function () {
+Route::get('/join', function () {
     return view('landing');
-});
+})->name('join');
 
 // Pieces
 Route::get('/wardrobe', 'PieceController@index');
