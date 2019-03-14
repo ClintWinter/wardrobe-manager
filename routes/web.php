@@ -1,9 +1,9 @@
 <?php
 
 Auth::routes();
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');
 
-Route::get('/join', function () {
+Route::get('/', function () {
     return view('landing');
 })->name('join');
 

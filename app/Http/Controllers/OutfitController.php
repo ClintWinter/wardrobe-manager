@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Piece;
+use App\Outfit;
 use Illuminate\Http\Request;
 
-class PieceController extends Controller
+class OutfitController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class PieceController extends Controller
      */
     public function index()
     {
-        return view('piece.index');
+        //
     }
 
     /**
@@ -41,10 +46,10 @@ class PieceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Piece  $piece
+     * @param  \App\Outfit  $outfit
      * @return \Illuminate\Http\Response
      */
-    public function show(Piece $piece)
+    public function show(Outfit $outfit)
     {
         //
     }
@@ -52,10 +57,10 @@ class PieceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Piece  $piece
+     * @param  \App\Outfit  $outfit
      * @return \Illuminate\Http\Response
      */
-    public function edit(Piece $piece)
+    public function edit(Outfit $outfit)
     {
         //
     }
@@ -64,10 +69,10 @@ class PieceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Piece  $piece
+     * @param  \App\Outfit  $outfit
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Piece $piece)
+    public function update(Request $request, Outfit $outfit)
     {
         //
     }
@@ -75,10 +80,10 @@ class PieceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Piece  $piece
+     * @param  \App\Outfit  $outfit
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Piece $piece)
+    public function destroy(Outfit $outfit)
     {
         //
     }
