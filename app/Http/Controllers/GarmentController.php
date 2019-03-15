@@ -11,7 +11,7 @@ class GarmentController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +19,11 @@ class GarmentController extends Controller
      */
     public function index()
     {
-        //
+        $garments = Garment::all();
+
+        return dd($garments);
+
+        return view('garment.index', compact('garments'));
     }
 
     /**

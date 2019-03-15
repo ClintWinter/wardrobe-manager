@@ -15,15 +15,15 @@ class CreateGarmentsTable extends Migration
     {
         Schema::create('garments', function (Blueprint $table) {
             $table->increments('GarmentID');
-            $table->binary('Deleted');
-            $table->integer('UserID');
-            $table->integer('TypeID');
-            $table->string('Color');
-            $table->string('Material');
-            $table->string('Fit');
-            $table->string('Formality');
-            $table->binary('Favorite');
-            $table->tinyInteger('WornStatus');
+            $table->boolean('Deleted')->default(false);
+            $table->integer('UserID')->nullable();
+            // $table->integer('TypeID');
+            $table->string('Color')->nullable();
+            // $table->string('Material');
+            // $table->string('Fit');
+            // $table->string('Formality');
+            $table->boolean('Favorite')->default(false);
+            // $table->tinyInteger('WornStatus');
             $table->timestamps();
         });
     }
