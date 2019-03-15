@@ -8,7 +8,7 @@
         @csrf
 
         <div class="form-group mb-15{{ $errors->has('name') ? ' is-invalid' : '' }}">
-            <label for="email" class="w-200 pr-20">{{ __('E-Mail Address') }}</label>
+            <label for="email" class="w-200 pr-20 align-right">{{ __('E-Mail Address') }}</label>
 
             <div class="w-300">
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-group mb-15{{ $errors->has('name') ? ' is-invalid' : '' }}">
-            <label for="password" class="w-200 pr-20">{{ __('Password') }}</label>
+            <label for="password" class="w-200 pr-20 align-right">{{ __('Password') }}</label>
 
             <div class="w-300">
                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
