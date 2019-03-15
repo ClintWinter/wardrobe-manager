@@ -1,6 +1,6 @@
 main.landing {
 
-    background: #F9F0ED;
+    background: $background-gradient;
 
     .hero {
         display: flex;
@@ -19,5 +19,6 @@ main.landing {
     .hero-subtitle {
         margin: 0;
         font-size:28px;
+        line-height: 42px;
     }
 }

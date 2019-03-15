@@ -16,13 +16,13 @@
     <main class="landing">
 
         <div class="hero">
-            <h1 class="hero-title mb-8">Wardrobe Manager</h1>
+            <h1 class="hero-title mb-20">Wardrobe Manager</h1>
 
-            <p class="hero-subtitle mb-8 w-600">Stop wasting time staring at your wardrobe every morning. Let us handle that.</p>
+            <p class="hero-subtitle mb-40 w-600">Stop wasting time staring at your wardrobe every morning. Let us handle that.</p>
 
             <div class="hero-buttons">
-                <a class="btn btn-primary" href="/register">Sign Up</a>
-                <a class="btn btn-secondary" href="/login">Login</a>
+                <a class="btn btn-lg btn-primary" href="/register">Sign Up</a>
+                <a class="btn btn-lg btn-secondary" href="/login">Login</a>
             </div>
         </div>
 
