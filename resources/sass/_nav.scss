@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     padding: 20px 30px;
 
-    background: white;
+    background: hsla(0,0%,100%,95%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     ul {
@@ -16,6 +16,15 @@ nav {
     }
 
     ul li {
-        margin: 0;
+        margin: 0 20px;
+        font-size: 18px;
+    }
+
+    ul li i {
+        font-size: 14px;
+    }
+
+    .add {
+        margin-left: 5px;
     }
 }

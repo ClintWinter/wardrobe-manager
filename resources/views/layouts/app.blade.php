@@ -25,12 +25,22 @@
 <body>
     <div id="app">
 
-        <nav>
+        <nav class="mb-40">
             <ul class="left">
                 <li><a href="{{ route('home') }}">WR</a></li>
             </ul>
+            <ul class="center">
+                <li>
+                    <a href="{{ url('/garments') }}">Garments</a>
+                    <a class="add" href="{{ url('/garments/create') }}"><i class="fas fa-plus"></i></a>
+                </li>
+                <li>
+                    <a href="{{ url('/outfits') }}">Outfits</a>
+                    <a class="add" href="{{ url('/outfits/create') }}"><i class="fas fa-plus"></i></a>
+                </li>
+            </ul>
             <ul class="right">
-                <li><a id="nav-popup" href="javascript:;"><i class="fas fa-bars"></i></a></li>
+                {{-- <li><a id="nav-popup" href="javascript:;"><i class="fas fa-bars"></i></a></li> --}}
                 @guest
                     <li>
                         <a href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -42,10 +52,12 @@
                     @endif
                 
                 @else
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
+                    <li>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
                 @endguest
             </ul>
         </nav>
@@ -53,6 +65,35 @@
         <main class="container">
             @yield('content')
         </main>
+
+        <div id="modal-container">
+            <div class="modal-mask"></div>
+            <div class="modal">
+                {{-- <div class="modal-header"></div>
+                <div class="modal-body"></div>
+                <div class="modal-footer"></div> --}}
+                <ul class="right">
+                    <li><a id="nav-popup" href="javascript:;"><i class="fas fa-bars"></i></a></li>
+                    @guest
+                        <li>
+                            <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @if (Route::has('register'))
+                            <li>
+                                <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    
+                    @else
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

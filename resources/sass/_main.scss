@@ -184,3 +184,50 @@ div.form-group {
 .align-right {
     text-align: right;
 }
+
+#modal-container {
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+
+
+    &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    position: absolute;
+
+    .modal-mask {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal {
+        position: absolute;
+        top: 70px;
+        width: 80%;
+        max-width: 1200px;
+    
+        @media (max-width: 900px) {
+            width: 90%;
+        }
+    
+        @media (max-width: 500px) {
+            width: 98%;
+        }
+        margin: 0 auto;
+        
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+}

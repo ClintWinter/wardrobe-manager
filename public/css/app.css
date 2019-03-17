@@ -824,11 +824,58 @@ div.form-group.is-invalid .invalid-feedback {
   text-align: right;
 }
 
+#modal-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  position: absolute;
+}
+
+#modal-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-container .modal-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-container .modal {
+  position: absolute;
+  top: 70px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  #modal-container .modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  #modal-container .modal {
+    width: 98%;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -841,7 +888,16 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0;
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+nav ul li i {
+  font-size: 14px;
+}
+
+nav .add {
+  margin-left: 5px;
 }
 
 body {

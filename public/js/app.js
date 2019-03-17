@@ -19170,6 +19170,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./main */ "./resources/js/main.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19214,6 +19216,35 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var $ = window.document;
+$.querySelector('#nav-popup').addEventListener('click', function (event) {
+  var modal = $.querySelector('#modal-container');
+
+  if (modal.classList.contains('active')) {
+    modal.classList.remove('active');
+  } else {
+    modal.classList.add('active');
+  }
+});
+$.querySelector('#modal-container .modal-mask').addEventListener('click', function (event) {
+  var modal = $.querySelector('#modal-container');
+
+  if (modal.classList.contains('active')) {
+    modal.classList.remove('active');
+  } else {
+    modal.classList.add('active');
+  }
+});
 
 /***/ }),
 

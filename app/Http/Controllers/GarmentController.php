@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Garment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GarmentController extends Controller
 {
@@ -19,11 +20,9 @@ class GarmentController extends Controller
      */
     public function index()
     {
-        $garments = Garment::all();
+        $Garments = Garment::all();
 
-        return dd($garments);
-
-        return view('garment.index', compact('garments'));
+        return view('garment.index', compact('Garments'));
     }
 
     /**
@@ -33,7 +32,7 @@ class GarmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('garment.create');
     }
 
     /**
@@ -42,9 +41,20 @@ class GarmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'color' => 'required',
+        ]);
+
+        Garment::create([
+            'name' => request('name'),
+            'color' => request('color'),
+            'UserID' => Auth::id(),
+        ]);
+
+        return redirect('/garments');
     }
 
     /**

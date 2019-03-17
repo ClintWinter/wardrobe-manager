@@ -17,6 +17,7 @@ class CreateGarmentsTable extends Migration
             $table->increments('GarmentID');
             $table->boolean('Deleted')->default(false);
             $table->integer('UserID')->nullable();
+            $table->string('Name');
             // $table->integer('TypeID');
             $table->string('Color')->nullable();
             // $table->string('Material');
