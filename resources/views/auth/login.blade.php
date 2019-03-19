@@ -4,7 +4,7 @@
 <div class="page-login">
     <h2>Login</h2>
     <div class="hr mb-50"></div>
-    <form class="w-600" method="POST" action="{{ route('login') }}">
+    <form class="primary-form w-600" method="POST" action="{{ route('login') }}">
         @csrf
 
         <div class="form-group mb-15{{ $errors->has('name') ? ' is-invalid' : '' }}">

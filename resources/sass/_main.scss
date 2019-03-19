@@ -33,6 +33,14 @@ a, a i {
     color: $primary;
 }
 
+.btn-link {
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
 .mb-0 { margin-bottom: 0 !important; }
 .mb-5 { margin-bottom: 5px !important; }
 .mb-10 { margin-bottom:10px !important; }

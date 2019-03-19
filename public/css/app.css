@@ -7,6 +7,17 @@
   box-sizing: border-box;
 }
 
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -422,6 +433,14 @@ a i {
 
 .btn-secondary {
   color: #8A3033;
+}
+
+.btn-link {
+  padding: 5px;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 .mb-0 {
@@ -875,7 +894,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(to right, #f0e0c2, #ebb3ad);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -901,7 +920,7 @@ nav .add {
 }
 
 body {
-  background: linear-gradient(to right, #f0e0c2, #ebb3ad);
+  background: #F9F0ED;
 }
 
 main.container {
@@ -912,7 +931,10 @@ main.container {
 }
 
 .page-register,
-.page-login {
+.page-login,
+.page-garments,
+.page-garment-create,
+.page-garment-edit {
   padding: 60px 0;
   width: 100%;
   max-width: 1200px;
@@ -920,33 +942,82 @@ main.container {
 
 @media (max-width: 1260px) {
   .page-register,
-  .page-login {
+  .page-login,
+  .page-garments,
+  .page-garment-create,
+  .page-garment-edit {
     padding: 60px;
   }
 }
 
 @media (max-width: 700px) {
   .page-register,
-  .page-login {
+  .page-login,
+  .page-garments,
+  .page-garment-create,
+  .page-garment-edit {
     padding: 40px 20px;
   }
 }
 
 @media (max-width: 500px) {
   .page-register,
-  .page-login {
+  .page-login,
+  .page-garments,
+  .page-garment-create,
+  .page-garment-edit {
     padding: 30px 5px;
   }
 }
 
-.page-register form,
-.page-login form {
+.page-register .primary-form,
+.page-login .primary-form,
+.page-garments .primary-form,
+.page-garment-create .primary-form,
+.page-garment-edit .primary-form {
   margin: 0 auto;
 }
 
-.page-register form .btn-primary,
-.page-login form .btn-primary {
+.page-register .primary-form .btn-primary,
+.page-login .primary-form .btn-primary,
+.page-garments .primary-form .btn-primary,
+.page-garment-create .primary-form .btn-primary,
+.page-garment-edit .primary-form .btn-primary {
   margin-left: 200px;
+}
+
+.page-garments .garments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.page-garments .garment-item {
+  flex-grow: 1;
+  max-width: 30%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: #F8F8FA;
+}
+
+.page-garments .garment-head {
+  padding: 5px 15px;
+  background: #ebebeb;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-garments .garment-head form .btn-link i {
+  font-size: 24px;
+  color: #8A3033;
+}
+
+.page-garments .garment-body {
+  padding: 30px 20px;
 }
 
 main.landing {

@@ -5,7 +5,7 @@
 <div class="page-register">
     <h2>Register</h2>
     <div class="hr mb-50"></div>
-    <form class="w-600" method="POST" action="{{ route('register') }}">
+    <form class="primary-form w-600" method="POST" action="{{ route('register') }}">
         @csrf
         <div class="form-group mb-15{{ $errors->has('name') ? ' is-invalid' : '' }}">
             <label for="name" class="w-200 pr-20 align-right">{{ __('Name') }}</label>

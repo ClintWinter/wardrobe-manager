@@ -60,10 +60,10 @@ class GarmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Garment  $garment
+     * @param  \App\Garment  $Garment
      * @return \Illuminate\Http\Response
      */
-    public function show(Garment $garment)
+    public function show(Garment $Garment)
     {
         //
     }
@@ -71,33 +71,42 @@ class GarmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Garment  $garment
+     * @param  \App\Garment  $Garment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Garment $garment)
+    public function edit(Garment $Garment)
     {
-        //
+        return view('garment.edit', compact('Garment'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Garment  $garment
+     * @param  \App\Garment  $Garment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Garment $garment)
+    public function update(Request $request, Garment $Garment)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'color' => 'required',
+        ]);
+
+        $Garment->Name = request('name');
+        $Garment->Color = request('color');
+        $Garment->save();
+
+        return redirect('/garments');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Garment  $garment
+     * @param  \App\Garment  $Garment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Garment $garment)
+    public function destroy(Garment $Garment)
     {
         //
     }

@@ -3,9 +3,19 @@
 /* Document
    ========================================================================== */
 
-   * {
-       box-sizing: border-box;
-   }
+* {
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
 
 /**
  * 1. Correct the line height in all browsers.

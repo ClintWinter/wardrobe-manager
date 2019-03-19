@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     padding: 20px 30px;
 
-    background: hsla(0,0%,100%,95%);
+    background: $background-gradient;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     ul {
