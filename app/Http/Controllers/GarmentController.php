@@ -108,6 +108,8 @@ class GarmentController extends Controller
      */
     public function destroy(Garment $Garment)
     {
-        //
+        $Garment->delete();
+
+        return redirect('/garments');
     }
 }

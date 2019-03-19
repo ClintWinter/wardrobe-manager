@@ -10,7 +10,7 @@
             <div class="garment-item">
                 <div class="garment-head">
                     <p><strong>{{ $Garment->Name }}</strong></p>
-                    <form action="{{ url('/garments/' . $Garment->GarmentID) }}">
+                    <form action="{{ url('/garments/' . $Garment->GarmentID) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn-link" type="submit"><i class="fas fa-times"></i></button>

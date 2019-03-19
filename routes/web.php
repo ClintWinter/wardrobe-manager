@@ -14,7 +14,7 @@ Route::post('/garments', 'GarmentController@store');
 Route::get('/garments/{garment}', 'GarmentController@show');
 Route::get('/garments/{garment}/edit', 'GarmentController@edit');
 Route::patch('/garments/{garment}', 'GarmentController@update');
-Route::delete('/garments', 'GarmentController@destroy');
+Route::delete('/garments/{garment}', 'GarmentController@destroy');
 
 // Outfits
 Route::get('/outfits', 'OutfitController@index');
