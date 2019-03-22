@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
+<header>
+    <h2 class="align-left">New Garment</h2>
+</header>
 <div class="page-garment-create">
-    <h2>New Garment</h2>
-    <div class="hr mb-50"></div>
     <form class="primary-form w-500" action="/garments" method="POST">
         @csrf
 

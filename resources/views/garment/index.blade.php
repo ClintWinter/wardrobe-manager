@@ -2,14 +2,17 @@
 
 @section('content')
 
+<header>
+    <h2>Garments</h2>
+</header>
+
 <div class="page-garments">
-    <h1>Garments</h1>
 
     <div class="garments-container">
         @foreach ($Garments as $Garment)
             <div class="garment-item">
                 <div class="garment-head">
-                    <p><strong>{{ $Garment->Name }}</strong></p>
+                    <p><a href="{{ url('/garments/' . $Garment->GarmentID . '/edit') }}"><strong>{{ $Garment->Name }}</strong></a></p>
                     <form action="{{ url('/garments/' . $Garment->GarmentID) }}" method="POST">
                         @csrf
                         @method('DELETE')

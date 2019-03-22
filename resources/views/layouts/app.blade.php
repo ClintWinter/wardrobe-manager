@@ -25,10 +25,11 @@
 <body>
     <div id="app">
 
-        <nav class="mb-40">
+        <nav>
             <ul class="left">
                 <li><a href="{{ route('home') }}">WR</a></li>
             </ul>
+            @auth
             <ul class="center">
                 <li>
                     <a href="{{ url('/garments') }}">Garments</a>
@@ -39,6 +40,7 @@
                     <a class="add" href="{{ url('/outfits/create') }}"><i class="fas fa-plus"></i></a>
                 </li>
             </ul>
+            @endauth
             <ul class="right">
                 {{-- <li><a id="nav-popup" href="javascript:;"><i class="fas fa-bars"></i></a></li> --}}
                 @guest

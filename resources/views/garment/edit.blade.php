@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="page-garment-edit">
+<header>
     <h2>Modify Garment: {{ $Garment->Name }}</h2>
-    <div class="hr mb-50"></div>
+</header>
+<div class="page-garment-edit">
     <form action="/garments/{{ $Garment->GarmentID }}" method="POST" class="primary-form w-500">
         @method('PATCH')
         @csrf

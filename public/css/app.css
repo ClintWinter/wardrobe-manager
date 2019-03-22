@@ -920,7 +920,7 @@ nav .add {
 }
 
 body {
-  background: #F9F0ED;
+  background: #f9efec;
 }
 
 main.container {
@@ -928,6 +928,14 @@ main.container {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  padding: 0 50px;
+  background: #fefcfb;
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .page-register,

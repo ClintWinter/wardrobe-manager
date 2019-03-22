@@ -19266,8 +19266,8 @@ $.querySelector('#modal-container .modal-mask').addEventListener('click', functi
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/cwinter/Sites/wardrobe-manager/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/cwinter/Sites/wardrobe-manager/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/clintwinter/Sites/wardrobe-manager/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/clintwinter/Sites/wardrobe-manager/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
