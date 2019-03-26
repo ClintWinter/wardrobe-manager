@@ -20,7 +20,7 @@ class GarmentController extends Controller
      */
     public function index()
     {
-        $Garments = Garment::all();
+        $Garments = Garment::where('Deleted', false)->get();
 
         return view('garment.index', compact('Garments'));
     }
@@ -108,7 +108,8 @@ class GarmentController extends Controller
      */
     public function destroy(Garment $Garment)
     {
-        $Garment->delete();
+        $Garment->Deleted = true;
+        $Garment->save();
 
         return redirect('/garments');
     }
