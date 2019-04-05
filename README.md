@@ -2,6 +2,7 @@
 
 ## Todo List
 
+* Look into authentication from Laracasts to get that user's garments only, etc.
 * Garments
     * ~Make deletes update "Delete" column in DB~
     * ~Index should only get garments that weren't "Deleted"~

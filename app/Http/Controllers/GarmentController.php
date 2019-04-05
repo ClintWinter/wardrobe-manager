@@ -20,9 +20,11 @@ class GarmentController extends Controller
      */
     public function index()
     {
-        $Garments = Garment::where('Deleted', false)->get();
+        $garments = user()->garments();
 
-        return view('garment.index', compact('Garments'));
+        dd($garments);
+
+        return view('garment.index', compact('garments'));
     }
 
     /**
@@ -51,7 +53,7 @@ class GarmentController extends Controller
         Garment::create([
             'name' => request('name'),
             'color' => request('color'),
-            'UserID' => Auth::id(),
+            'user_id' => Auth::id(),
         ]);
 
         return redirect('/garments');
